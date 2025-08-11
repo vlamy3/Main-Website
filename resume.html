@@ -114,6 +114,45 @@
 
         <!-- End content edits here. -->
       </section>
+      <script>
+              // Greeting based on time of day
+              window.addEventListener('DOMContentLoaded', () => {
+                const header = document.querySelector('header');
+                const hour = new Date().getHours();
+                let greeting;
+
+                if (hour < 12) {
+                  greeting = 'Good morning 🌞';
+                } else if (hour < 18) {
+                  greeting = 'Good afternoon ☀️';
+                } else {
+                  greeting = 'Good evening 🌙';
+                }
+
+                const greetingEl = document.createElement('p');
+                greetingEl.textContent = greeting;
+                greetingEl.style.fontStyle = 'italic';
+                greetingEl.style.marginTop = '10px';
+
+                header.appendChild(greetingEl);
+              });
+
+              // Copy email to clipboard on click
+              document.addEventListener('DOMContentLoaded', () => {
+                const emailLink = document.querySelector('a[href^="mailto:"]');
+                if (emailLink) {
+                  emailLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const email = this.getAttribute('href').replace('mailto:', '');
+                    navigator.clipboard.writeText(email).then(() => {
+                      alert('Email address copied to clipboard!');
+                    }, () => {
+                      alert('Failed to copy email address.');
+                    });
+                  });
+                }
+              });
+            </script>
     </main>
 
     <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
