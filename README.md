@@ -2,8 +2,7 @@
 
 This is my website built with HTML, CSS, and JavaScript to showcase my skills as a software engineer.
 
-🔗 Live demo: https://victorialamy.github.io/portfolio-site/
-
+🔗 Live demo: (https://vlamy3.github.io/Main-Website/)
 ## Features
 - Responsive layout
 - Dynamic greeting based on time of day
